@@ -45,7 +45,7 @@ const Product = () => {
             }
           } catch { /* fall through */ }
         }
-        setImageUrl(PRODUCT_IMAGES[prod.name] || `https://placehold.co/600x400/1a1a2e/eee?text=${encodeURIComponent(prod.name)}`);
+        setImageUrl(PRODUCT_IMAGES[prod.name] || `https://picsum.photos/seed/${prod.id}/600/400`);
       } catch (error) {
         console.error("Error fetching product:", error);
       }
@@ -116,7 +116,7 @@ const Product = () => {
           {/* Left — Image + CTAs */}
           <div className="col-12 col-md-5 d-flex flex-column align-items-center mb-4 mb-md-0">
             <div className="prod-img-zoom w-100">
-              <img src={imageUrl} alt={product.name} onError={e => { e.target.onerror = null; e.target.src = PRODUCT_IMAGES[product.name] || `https://placehold.co/600x400/1a1a2e/eee?text=${encodeURIComponent(product.name)}`; }} />
+              <img src={imageUrl} alt={product.name} onError={e => { e.target.onerror = null; e.target.src = PRODUCT_IMAGES[product.name] || `https://picsum.photos/seed/${product.id}/600/400`; }} />
             </div>
 
             {/* Qty selector */}
@@ -246,7 +246,7 @@ const Product = () => {
                   <img
                     src={PRODUCT_IMAGES[rp.name] || `${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || "http://localhost:8081/api"}`}/product/${rp.id}/image`}
                     alt={rp.name}
-                    onError={e => { e.target.onerror = null; e.target.src = `https://placehold.co/300x200/1a1a2e/eee?text=${encodeURIComponent(rp.name)}`; }}
+                    onError={e => { e.target.onerror = null; e.target.src = `https://picsum.photos/seed/${rp.id}/300/200`; }}
                   />
                   <div className="related-card__name">{rp.name}</div>
                   <div className="related-card__price">${rp.price}</div>

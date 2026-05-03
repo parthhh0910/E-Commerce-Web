@@ -22,7 +22,7 @@ const getProductImage = (product) => {
   // If product has an uploaded image on the backend, use that
   if (product.imageType) return `${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || "http://localhost:8081/api"}`}/product/${product.id}/image`;
   // Otherwise use our curated image map
-  return PRODUCT_IMAGES[product.name] || `https://placehold.co/600x400/1a1a2e/eee?text=${encodeURIComponent(product.name)}`;
+  return PRODUCT_IMAGES[product.name] || `https://picsum.photos/seed/${product.id}/600/400`;
 };
 
 const CATEGORIES = [
@@ -263,7 +263,7 @@ const Home = ({ selectedCategory: propCategory }) => {
                       src={getProductImage(product)}
                       alt={name}
                       className="home-card__img"
-                      onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/1a1a2e/eee?text=${encodeURIComponent(name)}`; }}
+                      onError={(e) => { e.target.onerror = null; e.target.src = `https://picsum.photos/seed/${id}/600/400`; }}
                     />
                   </div>
 
