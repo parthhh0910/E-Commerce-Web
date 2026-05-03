@@ -95,7 +95,7 @@ const Wishlist = () => {
                           src={PRODUCT_IMAGES[name] || `${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || "http://localhost:8081/api"}`}/product/${id}/image`}
                           alt={name}
                           className="home-card__img"
-                          onError={(e) => { e.target.onerror = null; e.target.src = `https://loremflickr.com/600/400/${product.category ? encodeURIComponent(product.category.toLowerCase()) : 'gadget'}?lock=${id}`; }}
+                          onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/1a1a2e/eee?text=${encodeURIComponent(name)}`; }}
                         />
                       </div>
 

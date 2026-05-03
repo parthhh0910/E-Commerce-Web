@@ -247,7 +247,7 @@ const CheckoutPage = () => {
                       src={item.imageUrl}
                       alt={item.name}
                       className="co-item__img"
-                      onError={e => { e.target.src = `https://loremflickr.com/80/80/${item.category ? encodeURIComponent(item.category.toLowerCase()) : 'gadget'}?lock=${item.id}`; }}
+                      onError={e => { e.target.src = "https://placehold.co/80x80?text=No+Img"; }}
                     />
                     <div className="co-item__info">
                       <div className="co-item__name">{item.name}</div>
@@ -486,7 +486,7 @@ const CheckoutPage = () => {
                   <div className="co-confirm-label">📦 Items ({itemCount})</div>
                   {cartItems.map(item => (
                     <div key={item.id} className="co-confirm-item">
-                      <img src={item.imageUrl} alt={item.name} className="co-confirm-item__img" onError={e => { e.target.src = `https://loremflickr.com/50/50/${item.category ? encodeURIComponent(item.category.toLowerCase()) : 'gadget'}?lock=${item.id}`; }} />
+                      <img src={item.imageUrl} alt={item.name} className="co-confirm-item__img" onError={e => { e.target.src = "https://placehold.co/50x50?text=Img"; }} />
                       <span>{item.name} × {item.quantity}</span>
                       <span style={{ marginLeft: "auto", fontWeight: 700 }}>${(item.price * item.quantity).toFixed(2)}</span>
                     </div>
