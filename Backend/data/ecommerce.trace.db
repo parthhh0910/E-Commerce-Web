@@ -1,0 +1,12 @@
+2026-05-03 22:29:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO [*]user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street')"; expected "identifier"; SQL statement:
+INSERT INTO user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street') [42001-214]
+2026-05-03 22:35:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO [*]user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street')"; expected "identifier"; SQL statement:
+INSERT INTO user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street') [42001-214]
+2026-05-03 22:50:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO [*]user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street')"; expected "identifier"; SQL statement:
+INSERT INTO user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street') [42001-214]
+2026-05-03 22:51:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO [*]user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street')"; expected "identifier"; SQL statement:
+INSERT INTO user (name, email, password, phone, address) VALUES ('Test User', 'test@test.com', 'test123', '1234567890', '123 Test Street') [42001-214]
