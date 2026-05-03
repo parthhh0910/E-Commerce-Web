@@ -35,7 +35,7 @@ const Cart = () => {
             ...item,
             imageUrl: item.imageType
               ? `${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || "http://localhost:8081/api"}`}/product/${item.id}/image`
-              : (PRODUCT_IMAGES[item.name] || `https://placehold.co/200x200/1a1a2e/eee?text=${encodeURIComponent(item.name)}`)
+              : (PRODUCT_IMAGES[item.name] || `https://loremflickr.com/200/200/${item.category ? encodeURIComponent(item.category.toLowerCase()) : 'gadget'}?lock=${item.id}`)
           }));
         setCartItems(items);
       } catch {
@@ -121,7 +121,7 @@ const Cart = () => {
                     src={item.imageUrl}
                     alt={item.name}
                     className="fk-cart-item__img"
-                    onError={e => { e.target.onerror = null; e.target.src = PRODUCT_IMAGES[item.name] || `https://placehold.co/200x200/1a1a2e/eee?text=${encodeURIComponent(item.name)}`; }}
+                    onError={e => { e.target.onerror = null; e.target.src = PRODUCT_IMAGES[item.name] || `https://loremflickr.com/200/200/${item.category ? encodeURIComponent(item.category.toLowerCase()) : 'gadget'}?lock=${item.id}`; }}
                   />
                   <div className="fk-cart-item__info">
                     <div className="fk-cart-item__name">{item.name}</div>
