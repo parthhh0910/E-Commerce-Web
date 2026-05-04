@@ -495,7 +495,9 @@ const CheckoutPage = () => {
 
                 <div className="co-delivery-info">
                   <span>🚚</span>
-                  <span>Expected by <strong>{getEstimatedDelivery()}</strong></span>
+                  <span>Expected by <strong>{deliverySlot.id === "scheduled" 
+                            ? new Date(customDate).toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long" }) 
+                            : (deliverySlot.days === 0 ? "Today" : getDateAfterDays(deliverySlot.days))}</strong></span>
                 </div>
 
                 <button
